@@ -1,0 +1,23 @@
+# how much memorythe emulated machine will have  
+megs: 32  
+   
+# filename of ROMimages  
+romimage:file=/usr/local/share/bochs/BIOS-bochs-latest  
+vgaromimage:file=/usr/local/share/bochs/VGABIOS-lgpl-latest  
+   
+# what disk imageswill be used  
+floppya: 1_44=freedos.img, status=inserted  
+floppyb: 1_44=pm.img, status=inserted
+boot: a
+   
+# choose the bootdisk.  
+boot: floppy  
+   
+# where do we sendlog messages?  
+log: bochsout.txt  
+   
+# disable themouse  
+mouse: enabled=0  
+   
+# enable keymapping, using Us layout as default  
+keyboard:keymap=/usr/local/share/bochs/keymaps/x11-pc-us.map
