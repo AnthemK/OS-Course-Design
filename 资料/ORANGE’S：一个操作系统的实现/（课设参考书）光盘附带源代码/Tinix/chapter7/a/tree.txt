@@ -1,0 +1,44 @@
+卷 DATA 的文件夹 PATH 列表
+卷序列号码为 0006FE80 1074:3DB7
+E:.
+│  bochsrc	.bxrc
+│  godbg	.bat
+│  Makefile
+│  TINIX	.IMG
+│  kernel	.bin
+│  
+├─boot
+│  │  loader	.asm
+│  │  boot	.asm
+│  │  boot	.bin
+│  │  loader	.bin
+│  │  
+│  └─include
+│          pm		.inc
+│          load	.inc
+│          fat12hdr	.inc
+│          
+├─include
+│      type	.h
+│      protect	.h
+│      const	.h
+│      proto	.h
+│      string	.h
+│      global	.h
+│      proc	.h
+│      sconst	.inc
+│      
+├─kernel
+│      start	.c
+│      kernel	.asm
+│      i8259	.c
+│      global	.c
+│      protect	.c
+│      main	.c
+│      clock	.c
+│      
+└─lib
+        string	.asm
+        klib	.asm
+        klib	.c
+        
