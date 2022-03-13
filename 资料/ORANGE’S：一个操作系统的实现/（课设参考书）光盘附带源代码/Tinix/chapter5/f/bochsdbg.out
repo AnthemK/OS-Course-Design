@@ -1,0 +1,77 @@
+
+E:>D:\Progra~1\Bochs-~1.1\bochsdbg.exe -q -f bochsrc.bxrc
+========================================================================
+                       Bochs x86 Emulator 2.1.1
+                           February 08, 2004
+========================================================================
+00000000000i[     ] reading configuration from bochsrc.bxrc
+00000000000i[     ] installing win32 module as the Bochs GUI
+00000000000i[     ] Warning: no rc file specified.
+00000000000i[     ] using log file bochsout.txt
+Next at t=0
+(0) context not implemented because BX_HAVE_HASH_MAP=0
+[0x000ffff0] f000:fff0 (unk. ctxt): jmp f000:e05b             ; ea5be000f0
+<bochs:1> b 0x30400
+<bochs:2> info break
+Num Type           Disp Enb Address
+  1 pbreakpoint    keep y   0x00030400
+<bochs:3> c
+(0) Breakpoint 1, 0x30400 in ?? ()
+Next at t=2500456
+(0) [0x00030400] 0008:00030400 (unk. ctxt): mov ah, 0xf               ; b40f
+<bochs:4> dump_cpu
+eax:0x30000
+ebx:0x400
+ecx:0x0
+edx:0x0
+ebp:0x2b7
+esi:0x80054
+edi:0x209000
+esp:0x9175d
+eflags:0x42
+eip:0x30400
+cs:s=0x8, dl=0xffff, dh=0xcf9a00, valid=1
+ss:s=0x10, dl=0xffff, dh=0xcf9300, valid=7
+ds:s=0x10, dl=0xffff, dh=0xcf9200, valid=7
+es:s=0x10, dl=0xffff, dh=0xcf9300, valid=5
+fs:s=0x10, dl=0xffff, dh=0xcf9300, valid=1
+gs:s=0x1b, dl=0x8000ffff, dh=0xf20b, valid=5
+ldtr:s=0x0, dl=0x0, dh=0x0, valid=0
+tr:s=0x0, dl=0x0, dh=0x0, valid=0
+gdtr:base=0x9013e, limit=0x20
+idtr:base=0x0, limit=0x3ff
+dr0:0x0
+dr1:0x0
+dr2:0x0
+dr3:0x0
+dr6:0xffff0ff0
+dr7:0x400
+tr3:0x0
+tr4:0x0
+tr5:0x0
+tr6:0x0
+tr7:0x0
+cr0:0xe0000011
+cr1:0x0
+cr2:0x0
+cr3:0x200000
+cr4:0x0
+inhibit_mask:0
+done
+<bochs:5> xp /32bx 0x9013e
+[bochs]:
+0x0009013e <bogus+       0>:    0x00    0x00    0x00    0x00    0x00    0x00    0x00    0x00
+0x00090146 <bogus+       8>:    0xff    0xff    0x00    0x00    0x00    0x9a    0xcf    0x00
+0x0009014e <bogus+      16>:    0xff    0xff    0x00    0x00    0x00    0x93    0xcf    0x00
+0x00090156 <bogus+      24>:    0xff    0xff    0x00    0x80    0x0b    0xf3    0x00    0x00
+<bochs:6> disassemble 0x30400 0x3040D
+00030400: (                    ): mov ah, 0xf               ; b40f
+00030402: (                    ): mov al, 0x4b              ; b04b
+00030404: (                    ): gs opsize mov [gs:0xee], ax ; 6566a3ee000000
+0003040b: (                    ): jmp 0x3040b               ; ebfe
+<bochs:7> s
+Next at t=2500457
+(0) [0x00030402] 0008:00030402 (unk. ctxt): mov al, 0x4b              ; b04b
+<bochs:8>
+
+

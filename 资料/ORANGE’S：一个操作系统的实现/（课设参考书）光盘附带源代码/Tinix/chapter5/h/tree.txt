@@ -1,0 +1,36 @@
+
+
+	\TINIX
+	©¦  bochsrc.bxrc
+	©¦  godbg.bat
+	©¦  TINIX.IMG
+	©¦  Makefile
+	©¦  bochsout.txt
+	©¦  kernel.bin
+	©¦  tree.txt
+	©¦  
+	©À©¤lib
+	©¦      string.asm
+	©¦      klib.asm
+	©¦      
+	©À©¤kernel
+	©¦      start.c
+	©¦      kernel.asm
+	©¦      
+	©À©¤include
+	©¦      type.h
+	©¦      protect.h
+	©¦      const.h
+	©¦      
+	©¸©¤boot
+	    ©¦  loader.asm
+	    ©¦  boot.asm
+	    ©¦  Makefile
+	    ©¦  boot.bin
+	    ©¦  loader.bin
+	    ©¦  
+	    ©¸©¤include
+		    pm.inc
+		    load.inc
+		    fat12hdr.inc
+            
